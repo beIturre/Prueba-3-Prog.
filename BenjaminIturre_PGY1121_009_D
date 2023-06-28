@@ -1,0 +1,48 @@
+while True:
+
+ print("-----------------Menu-----------------")
+ print("A continuacion selecione la opcion deseada:")
+ print("Opcion 1: Grabar Datos; NIF, nombre y edad")
+ print("Opcion 2: Buscar a persona (Por NIF)")
+ print("Opcion 3: Imprimir certificados")
+ print("Opcion 4: Salir")
+ print("---------------------------------------")
+ opcion = int(input("Que opción desea ingresar?"))
+ print("---------------------------------------")
+ if opcion == 1:
+  print("---------------------------------------")
+  print("A Continuacion Ingrese Su NIF: ")
+  print(f"ejemplo:\n99999999-RTX,\n03034567-XXY,\n12312345-CCU")
+  NIF = int(input("Primero ingrese los primeros 8 digitos del NIF: "))
+  digito = input("Ingrese datos faltantes del NIF sin Guión: ")
+  print("---------------------------------------")
+  print("Ingrese su nombre (Minimo 8 Caracteres)")
+  nombre = input()
+  print("---------------------------------------")
+  print("Ingrese su edad:")
+  edad = int(input())
+  print("---------------------------------------")
+  conyugo = input("Ingrese su estado conyugal: ")
+  print("---------------------------------------")
+  union = input("Usted pertenece a la Union Europea? Si/NO: ")
+ elif opcion == 2:
+  persona = input(f"Ingrese el NIF de la persona que desea buscar,\nsolo los primeros 8 digitos: ")
+  if persona == NIF:
+    print(f"NIF:      {NIF}-{digito}")
+    print(f"nombre:   {nombre}")
+    print(f"edad:     {edad}")
+ elif opcion == 3:
+  print(f"Certificado Nacimiento de {nombre} NIF: {NIF}-{digito}")
+  print("---------------------------------------")
+  print("Descargar Certificado.")
+  print("---------------------------------------")
+  print(f"Estado conyugal:                 {conyugo}")
+  print(f"Pertenencia a la union europea:  {union}")
+  print("---------------------------------------")
+
+ elif opcion == 4:
+  print(f"{nombre} Ha seleccionado la opcion salir, hasta luego")
+  print("Menu version 2.0")
+  break
+ else:
+  print("opcion no valida.")
